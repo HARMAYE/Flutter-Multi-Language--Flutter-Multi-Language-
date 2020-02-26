@@ -4,3 +4,4 @@ build:
 	go get -t
 	go build
 
+install:
