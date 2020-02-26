@@ -1,1 +1,3 @@
-all: build in
+all: build install 
+
+build:
