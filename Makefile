@@ -5,3 +5,4 @@ build:
 	go build
 
 install:
+	go insta
