@@ -5,4 +5,6 @@ build:
 	go build
 
 install:
-	go insta
+	go install
+
+test: bui
