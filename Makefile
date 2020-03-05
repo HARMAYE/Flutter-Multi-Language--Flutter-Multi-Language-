@@ -7,4 +7,4 @@ build:
 install:
 	go install
 
-test: bui
+test: build install
