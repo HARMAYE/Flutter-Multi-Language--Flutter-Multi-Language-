@@ -1,2 +1,2 @@
 # stockfighter
-Sto
+Stock Fight
