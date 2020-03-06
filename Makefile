@@ -8,3 +8,4 @@ install:
 	go install
 
 test: build install
+	go test -v *.go
