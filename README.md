@@ -1,2 +1,2 @@
 # stockfighter
-Stock Fighter implementa
+Stock Fighter implementation
