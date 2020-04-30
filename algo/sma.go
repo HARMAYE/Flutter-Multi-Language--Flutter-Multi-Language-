@@ -8,4 +8,4 @@ import (
 )
 
 /*
-http://www.investopedia.com/articles/act
+http://www.investopedia.com/articles/active-tradin
