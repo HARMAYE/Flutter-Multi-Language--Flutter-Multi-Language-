@@ -8,4 +8,4 @@ import (
 )
 
 /*
-http://www.investopedia.com/articles/active-tradin
+http://www.investopedia.com/articles/active-trading/012815/top-tec
