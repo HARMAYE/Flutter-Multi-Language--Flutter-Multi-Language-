@@ -8,4 +8,4 @@ import (
 )
 
 /*
-http://www.investopedia.com/articles/active-trading/012815/top-tec
+http://www.investopedia.com/articles/active-trading/012815/top-technical-indicator
