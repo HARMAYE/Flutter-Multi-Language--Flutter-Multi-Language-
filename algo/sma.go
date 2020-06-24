@@ -9,4 +9,4 @@ import (
 
 /*
 http://www.investopedia.com/articles/active-trading/012815/top-technical-indicators-scalping-trading-strategy.asp
-http://www.investopedia.com/articles/acti
+http://www.investopedia.com/articles/active-tradi
