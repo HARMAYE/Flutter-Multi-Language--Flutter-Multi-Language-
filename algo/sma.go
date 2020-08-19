@@ -14,4 +14,5 @@ http://www.investopedia.com/articles/active-trading/012815/top-technical-indicat
 http://www.day-trading-stocks.org/moving-average-crossover.html
  */
 
-type SimpleMovingAvg 
+type SimpleMovingAvg struct {
+	dat
