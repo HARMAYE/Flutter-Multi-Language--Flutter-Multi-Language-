@@ -15,4 +15,5 @@ http://www.day-trading-stocks.org/moving-average-crossover.html
  */
 
 type SimpleMovingAvg struct {
-	dat
+	data   list.List
+	p
