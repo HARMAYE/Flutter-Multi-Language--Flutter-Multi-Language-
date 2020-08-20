@@ -18,3 +18,5 @@ type SimpleMovingAvg struct {
 	data   list.List
 	period int
 }
+
+func Init
