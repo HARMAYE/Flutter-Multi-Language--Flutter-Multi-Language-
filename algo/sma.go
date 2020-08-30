@@ -19,4 +19,4 @@ type SimpleMovingAvg struct {
 	period int
 }
 
-func InitSimpleMovin
+func InitSimpleMovingAvg(period in
