@@ -20,4 +20,4 @@ type SimpleMovingAvg struct {
 }
 
 func InitSimpleMovingAvg(period int) *SimpleMovingAvg {
-	return &SimpleMovingAvg{perio
+	return &SimpleMovingAvg{period: period}
