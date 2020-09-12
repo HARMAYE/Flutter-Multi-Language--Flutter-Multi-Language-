@@ -23,4 +23,4 @@ func InitSimpleMovingAvg(period int) *SimpleMovingAvg {
 	return &SimpleMovingAvg{period: period}
 }
 
-func (o 
+func (o *SimpleMovi
