@@ -23,4 +23,5 @@ func InitSimpleMovingAvg(period int) *SimpleMovingAvg {
 	return &SimpleMovingAvg{period: period}
 }
 
-func (o *SimpleMovingAvg) Push(x 
+func (o *SimpleMovingAvg) Push(x int) {
+	if 
