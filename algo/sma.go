@@ -25,4 +25,4 @@ func InitSimpleMovingAvg(period int) *SimpleMovingAvg {
 
 func (o *SimpleMovingAvg) Push(x int) {
 	if o.data.Len() >= o.period {
-		o.dat
+		o.data.Remo
