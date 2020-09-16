@@ -25,4 +25,5 @@ func InitSimpleMovingAvg(period int) *SimpleMovingAvg {
 
 func (o *SimpleMovingAvg) Push(x int) {
 	if o.data.Len() >= o.period {
-		o.data.Remove(o.data.F
+		o.data.Remove(o.data.Front())
+	}
