@@ -29,3 +29,5 @@ func (o *SimpleMovingAvg) Push(x int) {
 	}
 	o.data.PushBack(x)
 }
+
+func (o *SimpleM
