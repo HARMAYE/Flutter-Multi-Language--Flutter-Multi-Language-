@@ -31,4 +31,4 @@ func (o *SimpleMovingAvg) Push(x int) {
 }
 
 func (o *SimpleMovingAvg) Value() int {
-	v
+	var sum in
