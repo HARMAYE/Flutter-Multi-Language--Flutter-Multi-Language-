@@ -32,4 +32,5 @@ func (o *SimpleMovingAvg) Push(x int) {
 
 func (o *SimpleMovingAvg) Value() int {
 	var sum int = 0
-	var currPeriod = 
+	var currPeriod = 0
+	for e
