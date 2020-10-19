@@ -34,4 +34,4 @@ func (o *SimpleMovingAvg) Value() int {
 	var sum int = 0
 	var currPeriod = 0
 	for e := o.data.Front(); e != nil && currPeriod <= o.period; e = e.Next() {
-		sum
+		sum += e.V
