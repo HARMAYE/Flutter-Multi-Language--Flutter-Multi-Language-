@@ -37,4 +37,7 @@ func (o *SimpleMovingAvg) Value() int {
 		sum += e.Value.(int)
 		currPeriod += 1
 	}
-	return sum / o.p
+	return sum / o.period
+}
+
+fu
