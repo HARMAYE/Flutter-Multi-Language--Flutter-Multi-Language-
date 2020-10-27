@@ -41,4 +41,5 @@ func (o *SimpleMovingAvg) Value() int {
 }
 
 func (o *SimpleMovingAvg) String() string {
-	return fmt.Sprin
+	return fmt.Sprintf(
+		"Si
