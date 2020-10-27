@@ -40,4 +40,4 @@ func (o *SimpleMovingAvg) Value() int {
 	return sum / o.period
 }
 
-fu
+func (o *Sim
