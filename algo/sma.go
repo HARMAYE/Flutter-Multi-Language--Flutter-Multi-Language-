@@ -42,4 +42,5 @@ func (o *SimpleMovingAvg) Value() int {
 
 func (o *SimpleMovingAvg) String() string {
 	return fmt.Sprintf(
-		"SimpleMovingAvg(Period:%d Value:%d Trend:%d Slice:%+v)
+		"SimpleMovingAvg(Period:%d Value:%d Trend:%d Slice:%+v)",
+		o.per
