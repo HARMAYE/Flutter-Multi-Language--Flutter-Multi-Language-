@@ -47,3 +47,4 @@ func (o *SimpleMovingAvg) String() string {
 	)
 }
 
+func (o *Sim
