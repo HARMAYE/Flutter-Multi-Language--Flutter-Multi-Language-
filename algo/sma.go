@@ -48,4 +48,5 @@ func (o *SimpleMovingAvg) String() string {
 }
 
 func (o *SimpleMovingAvg) slice() []int {
-	var
+	var s []int
+	for e 
