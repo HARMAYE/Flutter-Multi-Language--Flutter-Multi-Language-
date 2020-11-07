@@ -47,4 +47,5 @@ func (o *SimpleMovingAvg) String() string {
 	)
 }
 
-func (o *SimpleMovingAvg) slice() []i
+func (o *SimpleMovingAvg) slice() []int {
+	var
