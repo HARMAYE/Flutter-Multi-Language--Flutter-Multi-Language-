@@ -49,4 +49,4 @@ func (o *SimpleMovingAvg) String() string {
 
 func (o *SimpleMovingAvg) slice() []int {
 	var s []int
-	for e 
+	for e := o.data.Front(
