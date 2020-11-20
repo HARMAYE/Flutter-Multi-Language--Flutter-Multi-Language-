@@ -50,4 +50,4 @@ func (o *SimpleMovingAvg) String() string {
 func (o *SimpleMovingAvg) slice() []int {
 	var s []int
 	for e := o.data.Front(); e != nil; e = e.Next() {
-		s 
+		s = append(s
