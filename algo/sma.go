@@ -54,3 +54,5 @@ func (o *SimpleMovingAvg) slice() []int {
 	}
 	return s
 }
+
+func (o
