@@ -56,4 +56,5 @@ func (o *SimpleMovingAvg) slice() []int {
 }
 
 func (o *SimpleMovingAvg) Trend() int {
-	data := o.s
+	data := o.slice()
+	var
