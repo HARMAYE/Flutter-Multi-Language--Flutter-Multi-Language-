@@ -57,4 +57,5 @@ func (o *SimpleMovingAvg) slice() []int {
 
 func (o *SimpleMovingAvg) Trend() int {
 	data := o.slice()
-	var leftSum int = 
+	var leftSum int = 0
+	var leftCou
