@@ -59,4 +59,4 @@ func (o *SimpleMovingAvg) Trend() int {
 	data := o.slice()
 	var leftSum int = 0
 	var leftCount int = 0
-	for _, v := range 
+	for _, v := range data[0:len(data
