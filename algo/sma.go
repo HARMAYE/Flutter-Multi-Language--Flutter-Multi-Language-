@@ -65,4 +65,4 @@ func (o *SimpleMovingAvg) Trend() int {
 	}
 	var rightSum int = 0
 	var rightCount int = 0
-	
+	for _, v 
