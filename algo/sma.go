@@ -61,4 +61,6 @@ func (o *SimpleMovingAvg) Trend() int {
 	var leftCount int = 0
 	for _, v := range data[0:len(data) / 2] {
 		leftSum += v
-		le
+		leftCount += 1
+	}
+	
