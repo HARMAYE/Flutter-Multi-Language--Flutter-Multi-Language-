@@ -70,4 +70,4 @@ func (o *SimpleMovingAvg) Trend() int {
 		rightCount += 1
 	}
 
-	var
+	var leftAvg
