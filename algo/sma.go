@@ -71,4 +71,5 @@ func (o *SimpleMovingAvg) Trend() int {
 	}
 
 	var leftAvg = 0
-	if le
+	if leftCount != 0 {
+	
