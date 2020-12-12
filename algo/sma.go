@@ -75,4 +75,5 @@ func (o *SimpleMovingAvg) Trend() int {
 		leftAvg = leftSum / leftCount
 	}
 
-	var rig
+	var rightAvg = 0
+	if r
