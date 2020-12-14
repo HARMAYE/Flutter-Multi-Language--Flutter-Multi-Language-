@@ -76,4 +76,5 @@ func (o *SimpleMovingAvg) Trend() int {
 	}
 
 	var rightAvg = 0
-	if rightCount !=
+	if rightCount != 0 {
+		right
