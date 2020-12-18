@@ -78,3 +78,6 @@ func (o *SimpleMovingAvg) Trend() int {
 	var rightAvg = 0
 	if rightCount != 0 {
 		rightAvg = rightSum / rightCount
+	}
+
+	x1, y1 
