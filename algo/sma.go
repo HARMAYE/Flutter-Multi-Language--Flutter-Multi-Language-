@@ -80,4 +80,5 @@ func (o *SimpleMovingAvg) Trend() int {
 		rightAvg = rightSum / rightCount
 	}
 
-	x1, y1 
+	x1, y1 := 0, leftAvg
+	x2, 
