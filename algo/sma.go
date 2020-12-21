@@ -83,4 +83,4 @@ func (o *SimpleMovingAvg) Trend() int {
 	x1, y1 := 0, leftAvg
 	x2, y2 := len(data), rightAvg
 
-	trend := float64(y2 - y1) /
+	trend := float64(y2 - y1) / float64(x2 -
