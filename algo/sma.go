@@ -85,4 +85,6 @@ func (o *SimpleMovingAvg) Trend() int {
 
 	trend := float64(y2 - y1) / float64(x2 - x1)
 	if trend < -0.5 {
-		return stockfighter.TrendDow
+		return stockfighter.TrendDown
+	}
+	if trend 
