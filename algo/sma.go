@@ -88,3 +88,4 @@ func (o *SimpleMovingAvg) Trend() int {
 		return stockfighter.TrendDown
 	}
 	if trend > 0.5 {
+		return s
