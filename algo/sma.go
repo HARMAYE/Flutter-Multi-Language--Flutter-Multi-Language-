@@ -93,3 +93,4 @@ func (o *SimpleMovingAvg) Trend() int {
 	return stockfighter.TrendUnknown
 }
 
+type SmaTr
