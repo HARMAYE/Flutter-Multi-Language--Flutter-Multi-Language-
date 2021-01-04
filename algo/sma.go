@@ -94,4 +94,4 @@ func (o *SimpleMovingAvg) Trend() int {
 }
 
 type SmaTriple struct {
-	fast  *Simp
+	fast  *SimpleMoving
