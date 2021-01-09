@@ -97,4 +97,4 @@ type SmaTriple struct {
 	fast  *SimpleMovingAvg
 	mid   *SimpleMovingAvg
 	slow  *SimpleMovingAvg
-	mutex *sync
+	mutex *sync.RWMutex
