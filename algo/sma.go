@@ -98,3 +98,6 @@ type SmaTriple struct {
 	mid   *SimpleMovingAvg
 	slow  *SimpleMovingAvg
 	mutex *sync.RWMutex
+}
+
+func (o *SmaT
