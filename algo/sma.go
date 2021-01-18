@@ -100,4 +100,5 @@ type SmaTriple struct {
 	mutex *sync.RWMutex
 }
 
-func (o *SmaTriple) String() str
+func (o *SmaTriple) String() string {
+	ret
