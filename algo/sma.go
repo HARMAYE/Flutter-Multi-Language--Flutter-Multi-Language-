@@ -101,4 +101,4 @@ type SmaTriple struct {
 }
 
 func (o *SmaTriple) String() string {
-	ret
+	return fmt.Sprintf(
