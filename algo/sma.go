@@ -107,4 +107,4 @@ func (o *SmaTriple) String() string {
 	)
 }
 
-func InitSmaTriple(fast int, mid in
+func InitSmaTriple(fast int, mid int, slow int) *Sm
