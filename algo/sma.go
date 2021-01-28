@@ -107,4 +107,4 @@ func (o *SmaTriple) String() string {
 	)
 }
 
-f
+func Init
