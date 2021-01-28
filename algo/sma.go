@@ -103,4 +103,4 @@ type SmaTriple struct {
 func (o *SmaTriple) String() string {
 	return fmt.Sprintf(
 		"SmaTriple(Fast: %+v Mid: %+v, Slow: %+v Signal:%d)",
-		o.fast, o.mid,
+		o.fast, o.mid, o.slow, o.
