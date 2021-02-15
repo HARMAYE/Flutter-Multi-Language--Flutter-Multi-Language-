@@ -111,4 +111,5 @@ func InitSmaTriple(fast int, mid int, slow int) *SmaTriple {
 	return &SmaTriple{
 		fast: InitSimpleMovingAvg(fast),
 		mid: InitSimpleMovingAvg(mid),
-		slow: InitSimpleMovingAvg
+		slow: InitSimpleMovingAvg(slow),
+		m
