@@ -110,4 +110,4 @@ func (o *SmaTriple) String() string {
 func InitSmaTriple(fast int, mid int, slow int) *SmaTriple {
 	return &SmaTriple{
 		fast: InitSimpleMovingAvg(fast),
-		mid: InitSimpl
+		mid: InitSimpleMovin
