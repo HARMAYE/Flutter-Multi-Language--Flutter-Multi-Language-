@@ -116,4 +116,4 @@ func InitSmaTriple(fast int, mid int, slow int) *SmaTriple {
 	}
 }
 
-func (o *S
+func (o *SmaTriple) Push
