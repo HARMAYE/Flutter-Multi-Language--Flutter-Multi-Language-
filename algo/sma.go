@@ -112,4 +112,8 @@ func InitSmaTriple(fast int, mid int, slow int) *SmaTriple {
 		fast: InitSimpleMovingAvg(fast),
 		mid: InitSimpleMovingAvg(mid),
 		slow: InitSimpleMovingAvg(slow),
-		mutex: &sync.RWMut
+		mutex: &sync.RWMutex{},
+	}
+}
+
+f
