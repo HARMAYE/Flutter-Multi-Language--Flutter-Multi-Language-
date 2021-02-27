@@ -120,4 +120,5 @@ func (o *SmaTriple) Push(x int) {
 	o.mutex.Lock()
 	defer o.mutex.Unlock()
 	o.fast.Push(x)
-	o.mid.P
+	o.mid.Push(x)
+	o.slo
