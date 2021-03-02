@@ -124,4 +124,4 @@ func (o *SmaTriple) Push(x int) {
 	o.slow.Push(x)
 }
 
-func (o *SmaTrip
+func (o *SmaTriple) Signal
