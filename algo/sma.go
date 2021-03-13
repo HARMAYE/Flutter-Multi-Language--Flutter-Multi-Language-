@@ -127,4 +127,5 @@ func (o *SmaTriple) Push(x int) {
 func (o *SmaTriple) Signal() int {
 	o.mutex.RLock()
 	defer o.mutex.RUnlock()
-	if o.slow.Trend() == stockfighter.Tre
+	if o.slow.Trend() == stockfighter.TrendUp {
+		if o.fast.V
