@@ -129,4 +129,4 @@ func (o *SmaTriple) Signal() int {
 	defer o.mutex.RUnlock()
 	if o.slow.Trend() == stockfighter.TrendUp {
 		if o.fast.Value() > o.mid.Value() {
-			return s
+			return stockfighter.
