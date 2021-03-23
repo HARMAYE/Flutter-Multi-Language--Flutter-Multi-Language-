@@ -131,4 +131,4 @@ func (o *SmaTriple) Signal() int {
 		if o.fast.Value() > o.mid.Value() {
 			return stockfighter.SignalBuy
 		} else {
-			return st
+			return stockfighter.Sign
