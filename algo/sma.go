@@ -132,4 +132,6 @@ func (o *SmaTriple) Signal() int {
 			return stockfighter.SignalBuy
 		} else {
 			return stockfighter.SignalSell
-		
+		}
+	}
+	if o
