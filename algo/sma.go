@@ -135,4 +135,4 @@ func (o *SmaTriple) Signal() int {
 		}
 	}
 	if o.slow.Trend() == stockfighter.TrendDown {
-		ret
+		return stockfi
