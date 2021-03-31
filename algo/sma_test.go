@@ -43,3 +43,13 @@ func TestSimpleMovingAvg_Value(t *testing.T) {
 	sma := InitSimpleMovingAvg(testPeriod)
 	for i := 1; i <= testPeriod; i++ {
 		sma.Push(i)
+	}
+	if sma.Value() != 3 {
+		t.Error("bad value", sma.Value())
+	}
+}
+
+func TestSimpleMovingAvg_Trend_Positive(t *testing.T) {
+	sma := InitSimpleMovingAvg(testPeriod)
+	for _, v := range []int{10, 4, 8, 12, 15} {
+		sma.Push(v)
