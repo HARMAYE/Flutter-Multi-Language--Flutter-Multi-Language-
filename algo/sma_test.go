@@ -31,3 +31,15 @@ func TestSimpleMovingAvgPushOverflow(t *testing.T) {
 	for i := 1; i <= 5 * testPeriod; i++ {
 		sma.Push(i)
 	}
+	if !reflect.DeepEqual(sma.slice(), []int{21, 22, 23, 24, 25}) {
+		t.Error("bad slice", sma.slice())
+	}
+	if sma.Value() != 23 {
+		t.Error("bad value", sma.Value())
+	}
+}
+
+func TestSimpleMovingAvg_Value(t *testing.T) {
+	sma := InitSimpleMovingAvg(testPeriod)
+	for i := 1; i <= testPeriod; i++ {
+		sma.Push(i)
