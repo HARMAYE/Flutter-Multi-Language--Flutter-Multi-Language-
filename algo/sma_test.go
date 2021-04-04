@@ -77,3 +77,18 @@ func TestInitSmaTriple(t *testing.T) {
 }
 
 func TestSmaTriple_Signal_Buy(t *testing.T) {
+	sma := InitSmaTriple(1, 2, 3)
+	for _, v := range []int{1, 2, 4, 8} {
+		sma.Push(v)
+	}
+	if sma.slow.Trend() != stockfighter.TrendUp {
+		t.Error("bad signal", sma.slow.Trend())
+	}
+	if sma.Signal() != stockfighter.SignalBuy {
+		t.Error("bad signal", sma.Signal())
+	}
+}
+
+func TestSmaTriple_Signal_Sell(t *testing.T) {
+	sma := InitSmaTriple(1, 2, 3)
+	for _, v := range []int{5, 7, 5, 5, 1} {
