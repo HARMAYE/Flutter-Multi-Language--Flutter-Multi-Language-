@@ -53,3 +53,17 @@ func TestSimpleMovingAvg_Trend_Positive(t *testing.T) {
 	sma := InitSimpleMovingAvg(testPeriod)
 	for _, v := range []int{10, 4, 8, 12, 15} {
 		sma.Push(v)
+	}
+	if sma.Trend() != stockfighter.TrendUp {
+		t.Error("bad trend", sma.Trend())
+	}
+}
+
+func TestSimpleMovingAvg_Trend_Negative(t *testing.T) {
+	sma := InitSimpleMovingAvg(testPeriod)
+	for _, v := range []int{22, 20, 15, 17, 10} {
+		sma.Push(v)
+	}
+	if sma.Trend() != stockfighter.TrendDown {
+		t.Error("bad trend", sma.Trend())
+	}
