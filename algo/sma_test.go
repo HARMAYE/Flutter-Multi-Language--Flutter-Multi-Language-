@@ -67,3 +67,13 @@ func TestSimpleMovingAvg_Trend_Negative(t *testing.T) {
 	if sma.Trend() != stockfighter.TrendDown {
 		t.Error("bad trend", sma.Trend())
 	}
+}
+
+func TestInitSmaTriple(t *testing.T) {
+	sma := InitSmaTriple(5, 8, 13)
+	for i := 1; i <= 2 * testPeriod; i++ {
+		sma.Push(i)
+	}
+}
+
+func TestSmaTriple_Signal_Buy(t *testing.T) {
