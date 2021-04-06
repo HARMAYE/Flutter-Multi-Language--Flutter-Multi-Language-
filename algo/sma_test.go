@@ -92,3 +92,18 @@ func TestSmaTriple_Signal_Buy(t *testing.T) {
 func TestSmaTriple_Signal_Sell(t *testing.T) {
 	sma := InitSmaTriple(1, 2, 3)
 	for _, v := range []int{5, 7, 5, 5, 1} {
+		sma.Push(v)
+	}
+	if sma.Signal() != stockfighter.SignalSell {
+		t.Error("bad signal", sma.Signal())
+	}
+}
+
+func TestSmaTriple_Signal_Unknown(t *testing.T) {
+	sma := InitSmaTriple(1, 2, 3)
+	for _, v := range []int{1, 3, 1, 3} {
+		sma.Push(v)
+	}
+	if sma.Signal() != stockfighter.SignalUnknown {
+		t.Error("bad signal", sma.Signal())
+	}
