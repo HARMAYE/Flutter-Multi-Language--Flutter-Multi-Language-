@@ -107,3 +107,4 @@ func TestSmaTriple_Signal_Unknown(t *testing.T) {
 	if sma.Signal() != stockfighter.SignalUnknown {
 		t.Error("bad signal", sma.Signal())
 	}
+}
