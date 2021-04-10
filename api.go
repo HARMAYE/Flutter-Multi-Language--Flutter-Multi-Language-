@@ -28,3 +28,22 @@ func InitApi(config *config) *Api {
 		Config: config,
 	}
 }
+
+func (s *Api) HeartBeat() (*HeartBeat, error) {
+	buffer, err := s.GetRequest("ob/api/heartbeat")
+	if err != nil {
+		return nil, err
+	}
+
+	var value *HeartBeat
+	jsonErr := json.Unmarshal(buffer, &value)
+
+	if jsonErr == nil {
+		return value, nil
+	}
+
+	return nil, jsonErr
+}
+
+func (s *Api) VenueHeartBeat(venue string) (*VenueHeartBeat, error) {
+	buffer, err := s.GetRequest(fmt.Sprintf("ob/api/venues/%s/heartbeat", venue))
