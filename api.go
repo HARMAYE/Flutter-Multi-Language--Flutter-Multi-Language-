@@ -71,3 +71,10 @@ func (s *Api) VenueStocks(venue string) (*VenueStocks, error) {
 	jsonErr := json.Unmarshal(buffer, &value)
 	if jsonErr == nil {
 		return value, nil
+	}
+
+	return nil, jsonErr
+}
+
+func (s *Api) StockOrderBook(venue string, stock string) (*StockOrderBook, error) {
+	buffer, err := s.GetRequest(fmt.Sprintf("ob/api/venues/%s/stocks/%s", venue, stock))
