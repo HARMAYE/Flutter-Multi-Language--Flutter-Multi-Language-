@@ -64,3 +64,10 @@ func (s *Api) VenueStocks(venue string) (*VenueStocks, error) {
 	buffer, err := s.GetRequest(fmt.Sprintf("ob/api/venues/%s/stocks", venue))
 	if err != nil {
 		return nil, err
+	}
+
+	var value *VenueStocks
+
+	jsonErr := json.Unmarshal(buffer, &value)
+	if jsonErr == nil {
+		return value, nil
