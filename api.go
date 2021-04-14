@@ -109,3 +109,19 @@ func (s *Api) StockOrder(soReq *StockOrderRequest) (*StockOrder, error) {
 	if jsonErr == nil {
 		return value, nil
 	}
+
+	return nil, jsonErr
+}
+
+func (s *Api) StockOrderCancel(so *StockOrder) (*StockOrder, error) {
+	url := fmt.Sprintf(
+		"ob/api/venues/%s/stocks/%s/orders/%d", so.Venue, so.Symbol, so.Id,
+	)
+	buffer, err := s.DeleteRequest(url)
+	if err != nil {
+		return nil, err
+	}
+
+	var value *StockOrder
+
+	jsonErr := json.Unmarshal(buffer, &value)
