@@ -145,3 +145,12 @@ func (s *Api) StockOrdersAccountStatus(venue string, stock string) (*StockOrderA
 	if jsonErr == nil {
 		return value, nil
 	}
+
+	return nil, jsonErr
+}
+
+func (s *Api) StockQuote(venue string, stock string) (*StockQuote, error) {
+	buffer, err := s.GetRequest(fmt.Sprintf("ob/api/venues/%s/stocks/%s/quote", venue, stock))
+	if err != nil {
+		return nil, err
+	}
