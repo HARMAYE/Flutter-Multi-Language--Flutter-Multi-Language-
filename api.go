@@ -125,3 +125,14 @@ func (s *Api) StockOrderCancel(so *StockOrder) (*StockOrder, error) {
 	var value *StockOrder
 
 	jsonErr := json.Unmarshal(buffer, &value)
+	if jsonErr == nil {
+		return value, nil
+	}
+
+	return nil, jsonErr
+}
+
+func (s *Api) StockOrdersAccountStatus(venue string, stock string) (*StockOrderAccountStatus, error) {
+	urlFormat := "ob/api/venues/%s/accounts/%s/stocks/%s/orders"
+	buffer, err := s.GetRequest(fmt.Sprintf(urlFormat, venue, s.Config.Account, stock))
+	if err != nil {
