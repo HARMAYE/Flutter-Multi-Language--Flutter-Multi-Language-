@@ -100,3 +100,12 @@ func (s *Api) StockOrder(soReq *StockOrderRequest) (*StockOrder, error) {
 	buffer, err := s.PostRequest(url, soReq)
 	if err != nil {
 		return nil, err
+	}
+
+	var value *StockOrder
+
+	jsonErr := json.Unmarshal(buffer, &value)
+
+	if jsonErr == nil {
+		return value, nil
+	}
