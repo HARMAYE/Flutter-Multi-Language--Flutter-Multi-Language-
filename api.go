@@ -88,3 +88,15 @@ func (s *Api) StockOrderBook(venue string, stock string) (*StockOrderBook, error
 	jsonErr := json.Unmarshal(buffer, &value)
 	if jsonErr == nil {
 		return value, nil
+	}
+
+	return nil, jsonErr
+}
+
+func (s *Api) StockOrder(soReq *StockOrderRequest) (*StockOrder, error) {
+	url := fmt.Sprintf(
+		"ob/api/venues/%s/stocks/%s/orders", soReq.Venue, soReq.Stock,
+	)
+	buffer, err := s.PostRequest(url, soReq)
+	if err != nil {
+		return nil, err
