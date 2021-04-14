@@ -154,3 +154,22 @@ func (s *Api) StockQuote(venue string, stock string) (*StockQuote, error) {
 	if err != nil {
 		return nil, err
 	}
+
+	var value *StockQuote
+
+	jsonErr := json.Unmarshal(buffer, &value)
+	if jsonErr == nil {
+		return value, nil
+	}
+
+	return nil, jsonErr
+}
+
+func (s *Api) StockOrderStatus(so *StockOrder) (*StockOrder, error) {
+	urlFormat := "ob/api/venues/%s/stocks/%s/orders/%d"
+	buffer, err := s.GetRequest(fmt.Sprintf(urlFormat, so.Venue, so.Symbol, so.Id))
+	if err != nil {
+		return nil, err
+	}
+
+	var value *StockOrder
