@@ -173,3 +173,11 @@ func (s *Api) StockOrderStatus(so *StockOrder) (*StockOrder, error) {
 	}
 
 	var value *StockOrder
+
+	jsonErr := json.Unmarshal(buffer, &value)
+	if jsonErr == nil {
+		return value, nil
+	}
+
+	return nil, jsonErr
+}
