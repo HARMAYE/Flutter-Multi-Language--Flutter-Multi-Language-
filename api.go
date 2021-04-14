@@ -136,3 +136,12 @@ func (s *Api) StockOrdersAccountStatus(venue string, stock string) (*StockOrderA
 	urlFormat := "ob/api/venues/%s/accounts/%s/stocks/%s/orders"
 	buffer, err := s.GetRequest(fmt.Sprintf(urlFormat, venue, s.Config.Account, stock))
 	if err != nil {
+		return nil, err
+	}
+
+	var value *StockOrderAccountStatus
+
+	jsonErr := json.Unmarshal(buffer, &value)
+	if jsonErr == nil {
+		return value, nil
+	}
