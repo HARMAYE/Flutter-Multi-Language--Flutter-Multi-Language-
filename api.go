@@ -181,3 +181,14 @@ func (s *Api) StockOrderStatus(so *StockOrder) (*StockOrder, error) {
 
 	return nil, jsonErr
 }
+
+func (s *Api) GetRequest(url string) ([]byte, error) {
+	return s.Request("GET", url, nil)
+}
+
+func (s *Api) DeleteRequest(url string) ([]byte, error) {
+	return s.Request("DELETE", url, nil)
+}
+
+func (s *Api) PostRequest(url string, body interface{}) ([]byte, error) {
+	return s.Request("POST", url, body)
