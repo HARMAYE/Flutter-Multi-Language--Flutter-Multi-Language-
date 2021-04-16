@@ -192,3 +192,10 @@ func (s *Api) DeleteRequest(url string) ([]byte, error) {
 
 func (s *Api) PostRequest(url string, body interface{}) ([]byte, error) {
 	return s.Request("POST", url, body)
+}
+
+func (s *Api) Request(method string, path string, body interface{}) ([]byte, error) {
+
+	if body == nil {
+		body = ""
+	}
