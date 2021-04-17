@@ -199,3 +199,12 @@ func (s *Api) Request(method string, path string, body interface{}) ([]byte, err
 	if body == nil {
 		body = ""
 	}
+
+	req := goreq.Request{
+		Accept: "application/json",
+		Body: body,
+		ContentType: "application/json",
+		Method: method,
+		Uri: fmt.Sprintf("https://api.stockfighter.io/%s", path),
+
+	}
