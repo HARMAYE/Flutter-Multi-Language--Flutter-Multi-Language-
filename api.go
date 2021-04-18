@@ -208,3 +208,18 @@ func (s *Api) Request(method string, path string, body interface{}) ([]byte, err
 		Uri: fmt.Sprintf("https://api.stockfighter.io/%s", path),
 
 	}
+	req.AddHeader("X-Starfighter-Authorization", s.Config.ApiKey)
+
+	response, err := req.Do()
+	if err != nil {
+		return nil, err
+	}
+
+	buffer, readErr := ioutil.ReadAll(response.Body)
+	if readErr != nil {
+		return nil, readErr
+	} else if PRINT_JSON_RESPONSE {
+		fmt.Println(string(buffer))
+	}
+	return buffer, nil
+}
