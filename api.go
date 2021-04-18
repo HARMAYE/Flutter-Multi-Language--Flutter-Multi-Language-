@@ -223,3 +223,14 @@ func (s *Api) Request(method string, path string, body interface{}) ([]byte, err
 	}
 	return buffer, nil
 }
+
+func (s *Api) VenueTickerTape(stockQuoteChan chan *StockQuote, venue string) error {
+	urlFormat := "ob/api/ws/%s/venues/%s/tickertape"
+	url := fmt.Sprintf(urlFormat, s.Config.Account, venue)
+	return s.wsStockQuote(stockQuoteChan, url)
+}
+
+func (s *Api) StockTickerTape(stockQuoteChan chan *StockQuote, venue string, stock string) error {
+	urlFormat := "ob/api/ws/%s/venues/%s/tickertape/stocks/%s"
+	url := fmt.Sprintf(urlFormat, s.Config.Account, venue, stock)
+	return s.wsStockQuote(stockQuoteChan, url)
