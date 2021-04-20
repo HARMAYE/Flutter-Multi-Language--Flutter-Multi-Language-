@@ -234,3 +234,9 @@ func (s *Api) StockTickerTape(stockQuoteChan chan *StockQuote, venue string, sto
 	urlFormat := "ob/api/ws/%s/venues/%s/tickertape/stocks/%s"
 	url := fmt.Sprintf(urlFormat, s.Config.Account, venue, stock)
 	return s.wsStockQuote(stockQuoteChan, url)
+}
+
+func (s *Api) wsStockQuote(stockQuoteChan chan *StockQuote, url string) error {
+	conn, err := s.Stream(url)
+	if err != nil {
+		return err
