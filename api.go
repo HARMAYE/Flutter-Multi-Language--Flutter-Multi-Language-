@@ -240,3 +240,17 @@ func (s *Api) wsStockQuote(stockQuoteChan chan *StockQuote, url string) error {
 	conn, err := s.Stream(url)
 	if err != nil {
 		return err
+	}
+	for {
+		var sStockQuote *wrappedStockQuote
+		if err := websocket.JSON.Receive(conn, &sStockQuote); err != nil {
+			if err != nil {
+				if err == io.EOF {
+					break
+				}
+				if err != io.ErrUnexpectedEOF {
+					fmt.Println("message error:", err)
+				}
+				continue
+			}
+		}
