@@ -254,3 +254,11 @@ func (s *Api) wsStockQuote(stockQuoteChan chan *StockQuote, url string) error {
 				continue
 			}
 		}
+		//fmt.Printf("Received StreamQuote: %#v\n", sStockQuote)
+		stockQuoteChan <- sStockQuote.Quote
+	}
+	return nil
+}
+
+func (s *Api) VenueExecutions(executionsChan chan *Execution, venue string) error {
+	urlFormat := "ob/api/ws/%s/venues/%s/executions"
