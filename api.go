@@ -294,3 +294,15 @@ func (s *Api) wsExecutions(executionsChan chan *Execution, url string) error {
 		executionsChan <- execution
 	}
 	return nil
+}
+
+func (s *Api) Stream(path string) (ws *websocket.Conn, err error) {
+	var origin = "https://api.stockfighter.io/"
+	var url = fmt.Sprintf("wss://api.stockfighter.io/%s", path)
+	return websocket.Dial(url, "", origin)
+}
+
+func (s *Api) IsExchangeHealthy() {
+	if value, err := s.HeartBeat(); err == nil && value.Ok {
+		fmt.Println("Exchange is Healthy")
+	} else {
