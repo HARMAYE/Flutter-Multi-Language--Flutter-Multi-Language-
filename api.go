@@ -271,3 +271,15 @@ func (s *Api) StockExecutions(executionsChan chan *Execution, venue string, stoc
 	url := fmt.Sprintf(urlFormat, s.Config.Account, venue, stock)
 	return s.wsExecutions(executionsChan, url)
 }
+
+func (s *Api) wsExecutions(executionsChan chan *Execution, url string) error {
+	conn, err := s.Stream(url)
+	if err != nil {
+		return err
+	}
+	for {
+		var execution *Execution
+		if err := websocket.JSON.Receive(conn, &execution); err != nil {
+			if err != nil {
+				if err == io.EOF {
+					break
