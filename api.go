@@ -306,3 +306,14 @@ func (s *Api) IsExchangeHealthy() {
 	if value, err := s.HeartBeat(); err == nil && value.Ok {
 		fmt.Println("Exchange is Healthy")
 	} else {
+		log.Fatalf("Exchange is broken: %s", value.Error)
+	}
+}
+
+func (s *Api) GetBaseQuote(venue string, stock string) *StockQuote {
+	baseQuote, err := s.StockQuote(venue, stock)
+	if err != nil {
+		log.Fatal(err)
+	}
+	return baseQuote
+}
