@@ -283,3 +283,14 @@ func (s *Api) wsExecutions(executionsChan chan *Execution, url string) error {
 			if err != nil {
 				if err == io.EOF {
 					break
+				}
+				if err != io.ErrUnexpectedEOF {
+					fmt.Println("message error:", err)
+				}
+				continue
+			}
+		}
+		//fmt.Printf("Received Execution: %#v\n", execution)
+		executionsChan <- execution
+	}
+	return nil
