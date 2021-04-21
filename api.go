@@ -262,3 +262,12 @@ func (s *Api) wsStockQuote(stockQuoteChan chan *StockQuote, url string) error {
 
 func (s *Api) VenueExecutions(executionsChan chan *Execution, venue string) error {
 	urlFormat := "ob/api/ws/%s/venues/%s/executions"
+	url := fmt.Sprintf(urlFormat, s.Config.Account, venue)
+	return s.wsExecutions(executionsChan, url)
+}
+
+func (s *Api) StockExecutions(executionsChan chan *Execution, venue string, stock string) error {
+	urlFormat := "ob/api/ws/%s/venues/%s/executions/stocks/%s"
+	url := fmt.Sprintf(urlFormat, s.Config.Account, venue, stock)
+	return s.wsExecutions(executionsChan, url)
+}
