@@ -9,4 +9,7 @@ import (
 
 type config struct {
 	ApiKey  string
-	Account stri
+	Account string
+}
+
+func I
