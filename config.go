@@ -9,4 +9,4 @@ import (
 
 type config struct {
 	ApiKey  string
-	
+	Account stri
