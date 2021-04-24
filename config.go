@@ -7,4 +7,6 @@ import (
 	"fmt"
 )
 
-type config struct
+type config struct {
+	ApiKey  string
+	
