@@ -7,4 +7,4 @@ import (
 	"fmt"
 )
 
-t
+type config struct
