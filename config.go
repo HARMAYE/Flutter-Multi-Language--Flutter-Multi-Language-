@@ -12,4 +12,4 @@ type config struct {
 	Account string
 }
 
-func InitConfig(filepath string, acc
+func InitConfig(filepath string, account string) 
