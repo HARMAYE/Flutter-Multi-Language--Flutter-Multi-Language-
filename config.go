@@ -15,4 +15,4 @@ type config struct {
 func InitConfig(filepath string, account string) *config {
 	viper.SetConfigType("yaml")
 
-	if bs, err 
+	if bs, err := ioutil.Re
