@@ -13,4 +13,4 @@ type config struct {
 }
 
 func InitConfig(filepath string, account string) *config {
-	viper.SetC
+	viper.SetConfigType("yaml"
