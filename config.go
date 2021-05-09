@@ -15,4 +15,5 @@ type config struct {
 func InitConfig(filepath string, account string) *config {
 	viper.SetConfigType("yaml")
 
-	if bs, err := ioutil.ReadFile(filepath); err == 
+	if bs, err := ioutil.ReadFile(filepath); err == nil {
+		
