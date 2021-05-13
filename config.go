@@ -16,4 +16,5 @@ func InitConfig(filepath string, account string) *config {
 	viper.SetConfigType("yaml")
 
 	if bs, err := ioutil.ReadFile(filepath); err == nil {
-		viper.ReadConfig(bytes.NewBuffer
+		viper.ReadConfig(bytes.NewBuffer(bs))
+	} else {
