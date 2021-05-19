@@ -18,4 +18,4 @@ func InitConfig(filepath string, account string) *config {
 	if bs, err := ioutil.ReadFile(filepath); err == nil {
 		viper.ReadConfig(bytes.NewBuffer(bs))
 	} else {
-		fmt.
+		fmt.Println(er
