@@ -21,4 +21,5 @@ func InitConfig(filepath string, account string) *config {
 		fmt.Println(err)
 	}
 
-	return
+	return &config{
+		
