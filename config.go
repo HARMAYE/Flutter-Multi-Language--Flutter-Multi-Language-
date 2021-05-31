@@ -23,4 +23,5 @@ func InitConfig(filepath string, account string) *config {
 
 	return &config{
 		ApiKey: viper.GetString("api_key"),
-		Account: acc
+		Account: account,
+	}
