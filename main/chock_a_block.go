@@ -41,3 +41,22 @@ func main() {
 
 		if currQuote.Ask > 0 && currQuote.Ask < 5100 && (currQuote.Ask - askStep) > 0 {
 			soReq := &stockfighter.StockOrderRequest{
+				Account: config.Account,
+				Venue: baseQuote.Venue,
+				Stock: baseQuote.Symbol,
+				Price: 5100 - askStep,
+				Qty: shareStep,
+				Direction: stockfighter.DirectionBuy,
+				OrderType: stockfighter.OrderLimit,
+			}
+
+			fmt.Println("Requesting", soReq.Price, soReq.Qty)
+
+			stockOrder, soResErr := api.StockOrder(soReq);
+			if soResErr != nil {
+				fmt.Println(soResErr)
+			}
+
+			filled := shareStep - stockOrder.Qty
+			currShares += filled
+			fmt.Printf(
