@@ -60,3 +60,11 @@ func main() {
 			filled := shareStep - stockOrder.Qty
 			currShares += filled
 			fmt.Printf(
+				"Requested:%d, Filled:%d, CurrentShares:%d\n",
+				shareStep, filled, currShares,
+			)
+		}
+
+		time.Sleep(3 * time.Second)
+	}
+}
