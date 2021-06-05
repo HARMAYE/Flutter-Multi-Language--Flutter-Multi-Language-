@@ -24,3 +24,20 @@ func main() {
 	targetShares := 100000
 	maxShareStep := 30000
 	maxAskStep := 100
+
+	api.IsExchangeHealthy()
+	baseQuote := api.GetBaseQuote()
+
+	for currShares < targetShares {
+		shareStep := random.Intn(maxShareStep)
+		askStep := random.Intn(maxAskStep)
+
+		currQuote, err := api.StockQuote(venue, symbol)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		fmt.Println("Curr Ask", currQuote.Ask)
+
+		if currQuote.Ask > 0 && currQuote.Ask < 5100 && (currQuote.Ask - askStep) > 0 {
+			soReq := &stockfighter.StockOrderRequest{
