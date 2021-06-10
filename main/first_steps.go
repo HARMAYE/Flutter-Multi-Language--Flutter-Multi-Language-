@@ -8,4 +8,5 @@ import (
 
 var (
 	Account = "MS48925855"
-	Venue = "W
+	Venue = "WUTMEX"
+	Symbol = 
