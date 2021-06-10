@@ -2,4 +2,5 @@ package main
 
 import (
 	"fmt"
-	"github.com/cevaris/stockfighter
+	"github.com/cevaris/stockfighter"
+	"time"
