@@ -10,3 +10,6 @@ var (
 	Account = "MS48925855"
 	Venue = "WUTMEX"
 	Symbol = "EYNI"
+)
+
+var (
