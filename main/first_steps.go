@@ -9,4 +9,4 @@ import (
 var (
 	Account = "MS48925855"
 	Venue = "WUTMEX"
-	Symbol = 
+	Symbol = "EYNI"
