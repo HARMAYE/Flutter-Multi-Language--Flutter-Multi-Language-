@@ -13,4 +13,4 @@ var (
 )
 
 var (
-	con
+	config = sto
