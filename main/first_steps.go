@@ -13,4 +13,4 @@ var (
 )
 
 var (
-	config = sto
+	config = stockfigh
