@@ -13,4 +13,4 @@ var (
 )
 
 var (
-	config = stockfigh
+	config = stockfighter.InitConfig
