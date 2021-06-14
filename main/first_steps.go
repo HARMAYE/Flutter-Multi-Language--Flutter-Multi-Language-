@@ -13,4 +13,5 @@ var (
 )
 
 var (
-	config = stockfighter.InitConfig(".env.yml",
+	config = stockfighter.InitConfig(".env.yml", Account)
+	
