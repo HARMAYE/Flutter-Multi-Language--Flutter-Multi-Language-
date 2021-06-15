@@ -14,4 +14,5 @@ var (
 
 var (
 	config = stockfighter.InitConfig(".env.yml", Account)
-	api = stockfighter.InitApi(co
+	api = stockfighter.InitApi(config)
+	sessi
