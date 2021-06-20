@@ -15,4 +15,7 @@ var (
 var (
 	config = stockfighter.InitConfig(".env.yml", Account)
 	api = stockfighter.InitApi(config)
-	session = stockfighter.InitSession(config, Venu
+	session = stockfighter.InitSession(config, Venue)
+)
+
+func ma
