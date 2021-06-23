@@ -18,4 +18,4 @@ var (
 	session = stockfighter.InitSession(config, Venue)
 )
 
-func ma
+func main() {
