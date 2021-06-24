@@ -19,4 +19,4 @@ var (
 )
 
 func main() {
-	session.
+	session.Observe(Symbol)
