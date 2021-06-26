@@ -20,4 +20,4 @@ var (
 
 func main() {
 	session.Observe(Symbol)
-	for session
+	for session.LatestQuo
