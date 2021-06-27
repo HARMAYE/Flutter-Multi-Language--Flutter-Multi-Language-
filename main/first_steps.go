@@ -20,4 +20,4 @@ var (
 
 func main() {
 	session.Observe(Symbol)
-	for session.LatestQuote == nil || 
+	for session.LatestQuote == nil || session.Lates
