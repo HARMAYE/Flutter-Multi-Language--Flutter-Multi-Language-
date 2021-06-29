@@ -20,4 +20,5 @@ var (
 
 func main() {
 	session.Observe(Symbol)
-	for session.LatestQuote == nil || session.LatestQuote.As
+	for session.LatestQuote == nil || session.LatestQuote.Ask == 0 {
+	
