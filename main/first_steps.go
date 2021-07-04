@@ -21,4 +21,4 @@ var (
 func main() {
 	session.Observe(Symbol)
 	for session.LatestQuote == nil || session.LatestQuote.Ask == 0 {
-		fmt.Println("
+		fmt.Println("waiting f
