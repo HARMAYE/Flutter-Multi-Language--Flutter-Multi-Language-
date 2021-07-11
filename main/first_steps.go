@@ -22,4 +22,4 @@ func main() {
 	session.Observe(Symbol)
 	for session.LatestQuote == nil || session.LatestQuote.Ask == 0 {
 		fmt.Println("waiting for first quote", session.LatestQuote)
-		time
+		time.Sleep(
