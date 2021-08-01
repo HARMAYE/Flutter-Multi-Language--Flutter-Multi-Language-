@@ -25,4 +25,4 @@ func main() {
 		time.Sleep(1 * time.Second)
 	}
 
-	soReq := &stockfighter.StockOrd
+	soReq := &stockfighter.StockOrderRequest{
