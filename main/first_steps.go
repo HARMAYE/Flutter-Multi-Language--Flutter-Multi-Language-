@@ -26,4 +26,5 @@ func main() {
 	}
 
 	soReq := &stockfighter.StockOrderRequest{
-		Account: config.Acc
+		Account: config.Account,
+		Venue:
