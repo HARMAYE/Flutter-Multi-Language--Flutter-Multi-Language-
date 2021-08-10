@@ -29,4 +29,4 @@ func main() {
 		Account: config.Account,
 		Venue: Venue,
 		Stock: Symbol,
-		Price: se
+		Price: session.
