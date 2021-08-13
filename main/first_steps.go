@@ -29,4 +29,5 @@ func main() {
 		Account: config.Account,
 		Venue: Venue,
 		Stock: Symbol,
-		Price: session.LatestQuote
+		Price: session.LatestQuote.Ask - 100,
+		Q
