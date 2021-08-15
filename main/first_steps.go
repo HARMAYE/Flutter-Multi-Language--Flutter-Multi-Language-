@@ -31,4 +31,4 @@ func main() {
 		Stock: Symbol,
 		Price: session.LatestQuote.Ask - 100,
 		Qty: 100,
-		Dire
+		Direction: stockf
