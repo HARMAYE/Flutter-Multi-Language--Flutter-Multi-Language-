@@ -30,4 +30,5 @@ func main() {
 		Venue: Venue,
 		Stock: Symbol,
 		Price: session.LatestQuote.Ask - 100,
-		Q
+		Qty: 100,
+		Dire
