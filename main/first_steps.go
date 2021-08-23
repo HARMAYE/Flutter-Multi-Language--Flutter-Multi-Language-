@@ -31,4 +31,5 @@ func main() {
 		Stock: Symbol,
 		Price: session.LatestQuote.Ask - 100,
 		Qty: 100,
-		Direction: stockfighter.DirectionBu
+		Direction: stockfighter.DirectionBuy,
+		OrderTy
