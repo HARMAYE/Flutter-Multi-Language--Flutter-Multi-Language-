@@ -32,4 +32,6 @@ func main() {
 		Price: session.LatestQuote.Ask - 100,
 		Qty: 100,
 		Direction: stockfighter.DirectionBuy,
-		OrderType: stockfighter.Orde
+		OrderType: stockfighter.OrderMarketK,
+	}
+	s
