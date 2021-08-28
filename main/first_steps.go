@@ -34,4 +34,4 @@ func main() {
 		Direction: stockfighter.DirectionBuy,
 		OrderType: stockfighter.OrderMarketK,
 	}
-	s
+	stockOrder, s
