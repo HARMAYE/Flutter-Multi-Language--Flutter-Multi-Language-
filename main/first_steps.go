@@ -34,4 +34,4 @@ func main() {
 		Direction: stockfighter.DirectionBuy,
 		OrderType: stockfighter.OrderMarketK,
 	}
-	stockOrder, s
+	stockOrder, soResErr := ap
