@@ -35,4 +35,5 @@ func main() {
 		OrderType: stockfighter.OrderMarketK,
 	}
 	stockOrder, soResErr := api.StockOrder(soReq);
-	if soResErr ==
+	if soResErr == nil {
+		fm
