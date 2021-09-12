@@ -36,4 +36,4 @@ func main() {
 	}
 	stockOrder, soResErr := api.StockOrder(soReq);
 	if soResErr == nil {
-		fm
+		fmt.Printf("stockord
