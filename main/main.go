@@ -3,4 +3,4 @@ package main
 import (
 	"time"
 	"fmt"
-	"github.com/cevaris/stock
+	"github.com/cevaris/stockfighter
