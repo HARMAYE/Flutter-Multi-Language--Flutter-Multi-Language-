@@ -7,4 +7,4 @@ import (
 )
 
 func main() {
-	fmt.Print
+	fmt.Println(t
