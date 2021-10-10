@@ -6,4 +6,5 @@ import (
 	"github.com/cevaris/stockfighter"
 )
 
-func main(
+func main() {
+	fmt.Print
