@@ -9,4 +9,4 @@ import (
 func main() {
 	fmt.Println(time.Now().Unix())
 
-	config := s
+	config := stockfighte
