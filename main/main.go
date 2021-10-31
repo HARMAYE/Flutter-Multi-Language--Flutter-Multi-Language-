@@ -9,4 +9,6 @@ import (
 func main() {
 	fmt.Println(time.Now().Unix())
 
-	config := stockfighter.InitConfig(".env.yml
+	config := stockfighter.InitConfig(".env.yml")
+
+	fmt.Printf
