@@ -11,4 +11,4 @@ func main() {
 
 	config := stockfighter.InitConfig(".env.yml")
 
-	fmt.Printf
+	fmt.Printf("config:
