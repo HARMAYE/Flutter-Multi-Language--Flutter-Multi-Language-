@@ -11,4 +11,6 @@ func main() {
 
 	config := stockfighter.InitConfig(".env.yml")
 
-	fmt.Printf("config: %#v\n", config.ApiK
+	fmt.Printf("config: %#v\n", config.ApiKey)
+
+	api := 
