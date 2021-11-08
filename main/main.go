@@ -13,4 +13,4 @@ func main() {
 
 	fmt.Printf("config: %#v\n", config.ApiKey)
 
-	api := stockfighter.Init
+	api := stockfighter.InitApi(config, "
