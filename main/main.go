@@ -16,4 +16,4 @@ func main() {
 	api := stockfighter.InitApi(config, "HAE23155229")
 
 	if value, err := api.HeartBeat(); err == nil {
-		fmt.Pr
+		fmt.Printf("request: 
