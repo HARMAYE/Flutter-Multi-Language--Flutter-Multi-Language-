@@ -18,4 +18,7 @@ func main() {
 	if value, err := api.HeartBeat(); err == nil {
 		fmt.Printf("request: %#v\n", value)
 	} else {
-		fmt.Println(err
+		fmt.Println(err)
+	}
+
+	if v
