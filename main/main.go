@@ -21,4 +21,4 @@ func main() {
 		fmt.Println(err)
 	}
 
-	if value, err := api.VenueHeartBe
+	if value, err := api.VenueHeartBeat("TESTEX"); e
