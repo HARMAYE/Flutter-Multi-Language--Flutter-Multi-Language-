@@ -24,4 +24,4 @@ func main() {
 	if value, err := api.VenueHeartBeat("TESTEX"); err == nil {
 		fmt.Printf("request: %#v\n", value)
 	} else {
-	
+		fmt.Println(e
