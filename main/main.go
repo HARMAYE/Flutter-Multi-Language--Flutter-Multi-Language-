@@ -27,4 +27,4 @@ func main() {
 		fmt.Println(err)
 	}
 
-	if value, er
+	if value, err := api.V
