@@ -27,4 +27,4 @@ func main() {
 		fmt.Println(err)
 	}
 
-	if value, err := api.V
+	if value, err := api.VenueStocks("T
