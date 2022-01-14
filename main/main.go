@@ -27,4 +27,4 @@ func main() {
 		fmt.Println(err)
 	}
 
-	if 
+	if value, er
