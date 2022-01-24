@@ -27,4 +27,5 @@ func main() {
 		fmt.Println(err)
 	}
 
-	if value, err := api.VenueStocks("TESTEX"); er
+	if value, err := api.VenueStocks("TESTEX"); err == nil {
+		
