@@ -29,4 +29,4 @@ func main() {
 
 	if value, err := api.VenueStocks("TESTEX"); err == nil {
 		fmt.Printf("request: %#v\n", value)
-		fmt.Printf("
+		fmt.Printf("%#v\n", 
