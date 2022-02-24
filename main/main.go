@@ -31,4 +31,5 @@ func main() {
 		fmt.Printf("request: %#v\n", value)
 		fmt.Printf("%#v\n", value.Symbols[0].Name)
 	} else {
-		fmt.Printl
+		fmt.Println(err)
+	}
