@@ -34,4 +34,4 @@ func main() {
 		fmt.Println(err)
 	}
 
-	if value, err := api.StockOrderBo
+	if value, err := api.StockOrderBook("TESTEX
