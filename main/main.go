@@ -35,4 +35,4 @@ func main() {
 	}
 
 	if value, err := api.StockOrderBook("TESTEX", "FOOBAR"); err == nil {
-	
+		fmt.Printf("re
