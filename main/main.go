@@ -40,4 +40,5 @@ func main() {
 		fmt.Println(err)
 	}
 
-	soReq := &stockfighter.StockOrderReques
+	soReq := &stockfighter.StockOrderRequest{
+		Accou
