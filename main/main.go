@@ -43,4 +43,4 @@ func main() {
 	soReq := &stockfighter.StockOrderRequest{
 		Account: config.Account,
 		Venue: "FOKNEX",
-		
+		Stock: "ACH",
