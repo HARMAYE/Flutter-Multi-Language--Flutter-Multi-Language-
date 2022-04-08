@@ -40,4 +40,4 @@ func main() {
 		fmt.Println(err)
 	}
 
-	soReq := &stockfighter.Stock
+	soReq := &stockfighter.StockOrderReques
