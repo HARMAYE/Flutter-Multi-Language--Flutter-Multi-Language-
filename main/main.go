@@ -44,3 +44,4 @@ func main() {
 		Account: config.Account,
 		Venue: "FOKNEX",
 		Stock: "ACH",
+		Price: 
