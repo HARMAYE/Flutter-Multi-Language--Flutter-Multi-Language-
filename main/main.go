@@ -45,4 +45,5 @@ func main() {
 		Venue: "FOKNEX",
 		Stock: "ACH",
 		Price: 6000,
-		Q
+		Qty: 2,
+	
