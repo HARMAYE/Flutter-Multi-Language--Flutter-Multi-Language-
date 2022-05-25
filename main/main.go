@@ -46,4 +46,5 @@ func main() {
 		Stock: "ACH",
 		Price: 6000,
 		Qty: 2,
-		Direction: "buy"
+		Direction: "buy",
+		
