@@ -47,4 +47,4 @@ func main() {
 		Price: 6000,
 		Qty: 2,
 		Direction: "buy",
-		
+		OrderType: 
