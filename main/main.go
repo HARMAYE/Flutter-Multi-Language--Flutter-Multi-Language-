@@ -49,4 +49,4 @@ func main() {
 		Direction: "buy",
 		OrderType: "limit",
 	}
-	stockOrder, soResErr 
+	stockOrder, soResErr := api.StockOrd
