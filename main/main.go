@@ -50,4 +50,5 @@ func main() {
 		OrderType: "limit",
 	}
 	stockOrder, soResErr := api.StockOrder(soReq);
-	if soResErr 
+	if soResErr == nil {
+		fmt.Pr
