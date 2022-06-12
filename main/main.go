@@ -51,4 +51,4 @@ func main() {
 	}
 	stockOrder, soResErr := api.StockOrder(soReq);
 	if soResErr == nil {
-		fmt.Printf("stockorder request: %#v
+		fmt.Printf("stockorder request: %#v\n", stoc
