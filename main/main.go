@@ -53,4 +53,7 @@ func main() {
 	if soResErr == nil {
 		fmt.Printf("stockorder request: %#v\n", stockOrder)
 	} else {
-		fmt.Println(soResE
+		fmt.Println(soResErr)
+	}
+
+	//if
