@@ -56,4 +56,4 @@ func main() {
 		fmt.Println(soResErr)
 	}
 
-	//if value, err := api.StockOrderCancel(stockO
+	//if value, err := api.StockOrderCancel(stockOrder); err ==
