@@ -62,4 +62,4 @@ func main() {
 	//	fmt.Println(err)
 	//}
 
-	if value, err := api.StockOrderStatus
+	if value, err := api.StockOrderStatus(stockOrd
