@@ -62,4 +62,5 @@ func main() {
 	//	fmt.Println(err)
 	//}
 
-	if value, err := api.StockOrderStatus(stockOrder); err == 
+	if value, err := api.StockOrderStatus(stockOrder); err == nil {
+		fmt.
