@@ -63,4 +63,4 @@ func main() {
 	//}
 
 	if value, err := api.StockOrderStatus(stockOrder); err == nil {
-		fmt.Printf("stock order status: %#
+		fmt.Printf("stock order status: %#v\n", val
