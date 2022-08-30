@@ -68,4 +68,4 @@ func main() {
 		fmt.Println(err)
 	}
 
-	if value, e
+	if value, err := api.
