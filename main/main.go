@@ -68,4 +68,4 @@ func main() {
 		fmt.Println(err)
 	}
 
-	if value, err := api.
+	if value, err := api.StockO
