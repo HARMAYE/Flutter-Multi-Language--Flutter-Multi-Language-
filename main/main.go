@@ -69,3 +69,4 @@ func main() {
 	}
 
 	if value, err := api.StockOrdersAccountStatus(stockOrder); err == nil {
+		fmt.Pri
