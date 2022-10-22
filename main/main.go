@@ -71,4 +71,6 @@ func main() {
 	if value, err := api.StockOrdersAccountStatus(stockOrder); err == nil {
 		fmt.Printf("all stock order account status: %#v\n", value)
 		for i, order := range value.Orders {
-			fmt.Printf("order %d: %#v\n", i, ord
+			fmt.Printf("order %d: %#v\n", i, order)
+		}
+	} 
