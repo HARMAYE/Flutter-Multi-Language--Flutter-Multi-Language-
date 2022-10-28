@@ -74,4 +74,5 @@ func main() {
 			fmt.Printf("order %d: %#v\n", i, order)
 		}
 	} else {
-		fmt.
+		fmt.Println(err)
+	}
