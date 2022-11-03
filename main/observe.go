@@ -2,4 +2,4 @@ package main
 
 import (
 	"fmt"
-	"github.com/cevaris/stock
+	"github.com/cevaris/stockfighter"
