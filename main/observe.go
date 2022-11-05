@@ -4,4 +4,5 @@ import (
 	"fmt"
 	"github.com/cevaris/stockfighter"
 	"os"
-	"text/tem
+	"text/template"
+	"ti
