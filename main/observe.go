@@ -8,4 +8,4 @@ import (
 	"time"
 )
 
-func
+func main() {
