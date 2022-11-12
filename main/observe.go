@@ -9,4 +9,4 @@ import (
 )
 
 func main() {
-	config := stockfigh
+	config := stockfighter.InitConfig
