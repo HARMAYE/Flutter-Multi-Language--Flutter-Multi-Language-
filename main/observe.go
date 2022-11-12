@@ -9,4 +9,4 @@ import (
 )
 
 func main() {
-	config := stockfighter.InitConfig(".env.yml",
+	config := stockfighter.InitConfig(".env.yml", "SDS22054882
