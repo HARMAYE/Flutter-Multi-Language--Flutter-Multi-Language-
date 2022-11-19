@@ -10,4 +10,4 @@ import (
 
 func main() {
 	config := stockfighter.InitConfig(".env.yml", "SDS22054882")
-	fmt.Printf("confi
+	fmt.Printf("config: %#v\n",
