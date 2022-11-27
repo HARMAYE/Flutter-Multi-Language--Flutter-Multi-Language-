@@ -14,4 +14,4 @@ func main() {
 
 	api := stockfighter.InitApi(config)
 
-	if value, err 
+	if value, err := api.Hea
