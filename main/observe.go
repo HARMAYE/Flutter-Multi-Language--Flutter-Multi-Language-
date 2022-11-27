@@ -14,4 +14,4 @@ func main() {
 
 	api := stockfighter.InitApi(config)
 
-	if value, err := api.Hea
+	if value, err := api.HeartBeat()
