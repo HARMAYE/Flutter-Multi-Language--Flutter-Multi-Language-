@@ -15,4 +15,4 @@ func main() {
 	api := stockfighter.InitApi(config)
 
 	if value, err := api.HeartBeat(); err == nil {
-	
+		fmt.Prin
