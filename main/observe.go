@@ -20,4 +20,4 @@ func main() {
 		fmt.Println(err)
 	}
 
-	venueStockQuotes := 
+	venueStockQuotes := make(chan *stockfi
