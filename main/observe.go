@@ -20,4 +20,4 @@ func main() {
 		fmt.Println(err)
 	}
 
-	venueStock
+	venueStockQuotes := 
