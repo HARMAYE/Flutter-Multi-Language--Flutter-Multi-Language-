@@ -20,4 +20,5 @@ func main() {
 		fmt.Println(err)
 	}
 
-	venueStockQuotes := make(chan *stockfighter.StockQuote, 
+	venueStockQuotes := make(chan *stockfighter.StockQuote, 100)
+	defer 
