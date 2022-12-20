@@ -21,4 +21,5 @@ func main() {
 	}
 
 	venueStockQuotes := make(chan *stockfighter.StockQuote, 100)
-	defer close(venueStockQuote
+	defer close(venueStockQuotes)
+	g
