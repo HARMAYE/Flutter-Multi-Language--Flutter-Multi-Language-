@@ -22,4 +22,6 @@ func main() {
 
 	venueStockQuotes := make(chan *stockfighter.StockQuote, 100)
 	defer close(venueStockQuotes)
-	go api.VenueTickerTape(venueStockQuotes, 
+	go api.VenueTickerTape(venueStockQuotes, "WMSEX")
+
+	
