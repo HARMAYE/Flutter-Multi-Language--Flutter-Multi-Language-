@@ -25,4 +25,4 @@ func main() {
 	go api.VenueTickerTape(venueStockQuotes, "WMSEX")
 
 	t := template.New("StockQuote")
-	header 
+	header := "Symbo
