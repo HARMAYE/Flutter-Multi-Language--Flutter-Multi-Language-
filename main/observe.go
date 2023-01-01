@@ -24,4 +24,5 @@ func main() {
 	defer close(venueStockQuotes)
 	go api.VenueTickerTape(venueStockQuotes, "WMSEX")
 
-	t := template.New("St
+	t := template.New("StockQuote")
+	header 
