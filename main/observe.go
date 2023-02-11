@@ -26,4 +26,4 @@ func main() {
 
 	t := template.New("StockQuote")
 	header := "Symbol,Venue,Bid,Ask,BidSize,AskSize,BidDepth,AskDepth,Last,LastSize,QuoteTime\n"
-	format, _ := t.Parse("{{.Symbol}},{{.Venue}},{{.Bid}},{{.Ask}},{{.BidSize}},{{.AskSize}},{{.BidDepth}},{{.AskDepth}},{{.Last}},{
+	format, _ := t.Parse("{{.Symbol}},{{.Venue}},{{.Bid}},{{.Ask}},{{.BidSize}},{{.AskSize}},{{.BidDepth}},{{.AskDepth}},{{.Last}},{{.LastSize}},\"{{.
