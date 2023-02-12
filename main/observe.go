@@ -28,4 +28,5 @@ func main() {
 	header := "Symbol,Venue,Bid,Ask,BidSize,AskSize,BidDepth,AskDepth,Last,LastSize,QuoteTime\n"
 	format, _ := t.Parse("{{.Symbol}},{{.Venue}},{{.Bid}},{{.Ask}},{{.BidSize}},{{.AskSize}},{{.BidDepth}},{{.AskDepth}},{{.Last}},{{.LastSize}},\"{{.QuoteTime}}\"\n")
 
-	now :=
+	now := time.Now()
+	now.Forma
