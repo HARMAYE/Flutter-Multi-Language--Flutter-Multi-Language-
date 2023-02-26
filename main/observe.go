@@ -30,4 +30,4 @@ func main() {
 
 	now := time.Now()
 	now.Format()
-	filePath := fmt.Sprintf("/data/%s-%d-%d-%d.csv", config.Account, now.Hour(), now.Minute
+	filePath := fmt.Sprintf("/data/%s-%d-%d-%d.csv", config.Account, now.Hour(), now.Minute(), now.S
