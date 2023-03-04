@@ -33,4 +33,4 @@ func main() {
 	filePath := fmt.Sprintf("/data/%s-%d-%d-%d.csv", config.Account, now.Hour(), now.Minute(), now.Second())
 	fmt.Println(filePath)
 
-	f, err := 
+	f, err := os.OpenFile(file
