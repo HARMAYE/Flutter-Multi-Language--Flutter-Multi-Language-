@@ -34,4 +34,4 @@ func main() {
 	fmt.Println(filePath)
 
 	f, err := os.OpenFile(filePath, os.O_APPEND | os.O_CREATE | os.O_WRONLY, 0600)
-	if
+	if err != ni
