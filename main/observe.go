@@ -37,4 +37,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	} else {
-		defer f.Clos
+		defer f.Close()
+	}
+
+	f.Wr
