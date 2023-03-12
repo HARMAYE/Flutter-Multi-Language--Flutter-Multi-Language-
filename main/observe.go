@@ -40,4 +40,4 @@ func main() {
 		defer f.Close()
 	}
 
-	f.Wr
+	f.WriteString(header)
