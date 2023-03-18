@@ -41,3 +41,4 @@ func main() {
 	}
 
 	f.WriteString(header)
+	for stockQu
