@@ -41,4 +41,5 @@ func main() {
 	}
 
 	f.WriteString(header)
-	for stockQuote := range venueS
+	for stockQuote := range venueStockQuotes {
+	
