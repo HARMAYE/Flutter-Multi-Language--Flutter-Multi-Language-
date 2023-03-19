@@ -41,4 +41,4 @@ func main() {
 	}
 
 	f.WriteString(header)
-	for stockQu
+	for stockQuote := rang
