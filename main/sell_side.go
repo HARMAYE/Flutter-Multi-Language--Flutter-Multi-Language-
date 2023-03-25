@@ -18,3 +18,13 @@ var (
 	config = stockfighter.InitConfig(".env.yml", Account)
 	api = stockfighter.InitApi(config)
 	session = stockfighter.InitSession(config, Venue)
+	smaTri = algo.InitSmaTriple(5, 10, 13)
+)
+
+func main() {
+	api.IsExchangeHealthy()
+	session.Observe(Symbol)
+
+	go positionWorker()
+
+	for {
