@@ -42,4 +42,6 @@ func main() {
 
 	f.WriteString(header)
 	for stockQuote := range venueStockQuotes {
-		format.Execute(f, stoc
+		format.Execute(f, stockQuote)
+	}
+}
