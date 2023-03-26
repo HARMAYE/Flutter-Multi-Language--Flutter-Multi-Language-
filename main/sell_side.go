@@ -28,3 +28,14 @@ func main() {
 	go positionWorker()
 
 	for {
+		fmt.Println(session)
+		time.Sleep(3 * time.Second)
+	}
+}
+
+func positionWorker() {
+	for {
+		quote := session.LatestQuote
+
+		if quote != nil {
+			smaTri.Push(quote.Last)
