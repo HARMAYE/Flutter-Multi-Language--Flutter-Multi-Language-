@@ -55,3 +55,14 @@ func positionWorker() {
 
 		time.Sleep(1 * time.Second)
 	}
+}
+
+func executeOrder(direction string, price int, qty int) *stockfighter.StockOrder {
+	soReq := &stockfighter.StockOrderRequest{
+		Account: Account,
+		Venue: Venue,
+		Stock: Symbol,
+		Price: price,
+		Qty: qty,
+		Direction: direction,
+		OrderType: stockfighter.OrderLimit,
