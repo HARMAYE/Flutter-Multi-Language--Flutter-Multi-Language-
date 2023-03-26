@@ -66,3 +66,13 @@ func executeOrder(direction string, price int, qty int) *stockfighter.StockOrder
 		Qty: qty,
 		Direction: direction,
 		OrderType: stockfighter.OrderLimit,
+	}
+
+	fmt.Println("Order", soReq.String())
+
+	so, soResErr := api.StockOrder(soReq);
+	if soResErr != nil {
+		fmt.Println(soResErr)
+	}
+	return so
+}
