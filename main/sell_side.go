@@ -39,3 +39,19 @@ func positionWorker() {
 
 		if quote != nil {
 			smaTri.Push(quote.Last)
+
+			if smaTri.Signal() == stockfighter.SignalBuy && session.TotalPosition < 300 {
+				if quote.Ask > 0 {
+					executeOrder(stockfighter.DirectionBuy, quote.Ask - 300, 200)
+				}
+			}
+
+			if smaTri.Signal() == stockfighter.SignalSell && session.TotalPosition > -300 {
+				if quote.Bid > 0 {
+					executeOrder(stockfighter.DirectionSell, quote.Bid + 300, 200)
+				}
+			}
+		}
+
+		time.Sleep(1 * time.Second)
+	}
