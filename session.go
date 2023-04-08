@@ -54,3 +54,14 @@ func (o *Session) Update(status *StockOrderAccountStatus) {
 		if !so.Ok {
 			continue
 		}
+
+		if so.Direction == DirectionBuy {
+			sumPositionNonSecured -= so.Qty
+		}
+		if so.Direction == DirectionSell {
+			sumPositionNonSecured += so.Qty
+		}
+
+		for _, fill := range so.Fills {
+
+			if so.Direction == DirectionBuy {
