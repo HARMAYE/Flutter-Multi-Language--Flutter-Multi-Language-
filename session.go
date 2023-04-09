@@ -92,3 +92,18 @@ func (o *Session) Observe(symbol string) {
 			o.mutex.Lock()
 			o.LatestQuote = q
 			o.mutex.Unlock()
+		}
+	}(o.quoteChan)
+
+	go o.api.StockExecutions(o.fillChan, o.Venue, symbol)
+	go func(c chan *Execution) {
+		for e := range c {
+			fmt.Println(e)
+			if status, err := o.api.StockOrdersAccountStatus(o.Venue, symbol); err != nil {
+				fmt.Println(err)
+			} else {
+				o.Update(status)
+			}
+		}
+	}(o.fillChan)
+}
