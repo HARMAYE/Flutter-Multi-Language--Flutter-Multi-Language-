@@ -80,3 +80,15 @@ func (o *Session) Update(status *StockOrderAccountStatus) {
 		o.NAV = sumCash + (sumPositionSecured * o.LatestQuote.Last)
 	}
 	o.Cash = sumCash
+	o.Position = sumPositionSecured
+	o.TotalPosition = sumPositionSecured + sumPositionNonSecured
+	o.mutex.Unlock()
+}
+
+func (o *Session) Observe(symbol string) {
+	go o.api.StockTickerTape(o.quoteChan, o.Venue, symbol)
+	go func(c chan *StockQuote) {
+		for q := range c {
+			o.mutex.Lock()
+			o.LatestQuote = q
+			o.mutex.Unlock()
