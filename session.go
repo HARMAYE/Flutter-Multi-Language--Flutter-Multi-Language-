@@ -65,3 +65,18 @@ func (o *Session) Update(status *StockOrderAccountStatus) {
 		for _, fill := range so.Fills {
 
 			if so.Direction == DirectionBuy {
+				sumCash -= fill.Price * fill.Qty
+				sumPositionSecured += fill.Qty
+			}
+			if so.Direction == DirectionSell {
+				sumCash += fill.Price * fill.Qty
+				sumPositionSecured -= fill.Qty
+			}
+		}
+	}
+
+	o.mutex.Lock()
+	if o.LatestQuote != nil && o.LatestQuote.Last > 0 {
+		o.NAV = sumCash + (sumPositionSecured * o.LatestQuote.Last)
+	}
+	o.Cash = sumCash
