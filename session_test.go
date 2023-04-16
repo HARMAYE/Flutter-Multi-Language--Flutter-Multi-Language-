@@ -40,3 +40,20 @@ func TestSessionUpdate(t *testing.T) {
 				Direction: DirectionSell,
 				Fills: []*Fill{
 					&Fill{Qty:10, Price:200},
+				},
+			},
+		},
+	})
+	if session.Position != (10 + 5 - 10) {
+		t.Error("invalid position", session.Position)
+	}
+	if session.Cash != 2000 - 2000 {
+		t.Error("invalid cash", session.Cash)
+	}
+	if session.NAV != 5 * 100 {
+		t.Error("invalid nav", session.NAV)
+	}
+}
+
+func TestSessionUpdateOkOnlyStockOrders(t *testing.T) {
+	session := InitSession(&config{}, testVenue)
