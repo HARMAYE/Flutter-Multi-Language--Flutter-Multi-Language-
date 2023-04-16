@@ -31,3 +31,12 @@ func TestSessionUpdate(t *testing.T) {
 				Ok: true,
 				Direction: DirectionBuy,
 				Fills: []*Fill{
+					&Fill{Qty:10, Price:100},
+					&Fill{Qty:5, Price:200},
+				},
+			},
+			&StockOrder{
+				Ok: true,
+				Direction: DirectionSell,
+				Fills: []*Fill{
+					&Fill{Qty:10, Price:200},
