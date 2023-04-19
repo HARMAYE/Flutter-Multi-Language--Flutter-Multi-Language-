@@ -57,3 +57,22 @@ func TestSessionUpdate(t *testing.T) {
 
 func TestSessionUpdateOkOnlyStockOrders(t *testing.T) {
 	session := InitSession(&config{}, testVenue)
+
+	session.Update(&StockOrderAccountStatus{
+		Ok: true,
+		Venue: testVenue,
+		Orders: []*StockOrder{
+			&StockOrder{
+				Ok: true,
+				Direction: DirectionBuy,
+				Fills: []*Fill{
+					&Fill{Qty:10, Price:100},
+					&Fill{Qty:5, Price:200},
+				},
+			},
+			&StockOrder{
+				Ok: false,
+				Direction: DirectionBuy,
+				Fills: []*Fill{
+					&Fill{Qty:100, Price:100},
+				},
