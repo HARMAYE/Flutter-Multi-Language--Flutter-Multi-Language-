@@ -88,3 +88,13 @@ func TestSessionUpdateOkOnlyStockOrders(t *testing.T) {
 	if session.NAV != 0 {
 		t.Error("invalid nav", session.NAV)
 	}
+}
+
+func TestSessionUpdateOkOnlyStatus(t *testing.T) {
+	session := InitSession(&config{}, testVenue)
+
+	session.Update(&StockOrderAccountStatus{
+		Ok: false,
+		Venue: testVenue,
+		Orders: []*StockOrder{
+			&StockOrder{
