@@ -110,3 +110,10 @@ func TestSessionUpdateOkOnlyStatus(t *testing.T) {
 	if session.Position != 0 {
 		t.Error("invalid position", session.Position)
 	}
+	if session.Cash != 0 {
+		t.Error("invalid cash", session.Cash)
+	}
+	if session.NAV != 0 {
+		t.Error("invalid nav", session.NAV)
+	}
+}
