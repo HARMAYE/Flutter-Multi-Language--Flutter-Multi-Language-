@@ -98,3 +98,15 @@ func TestSessionUpdateOkOnlyStatus(t *testing.T) {
 		Venue: testVenue,
 		Orders: []*StockOrder{
 			&StockOrder{
+				Ok: true,
+				Direction: DirectionBuy,
+				Fills: []*Fill{
+					&Fill{Qty:10, Price:100},
+					&Fill{Qty:5, Price:200},
+				},
+			},
+		},
+	})
+	if session.Position != 0 {
+		t.Error("invalid position", session.Position)
+	}
