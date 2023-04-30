@@ -28,3 +28,12 @@ const (
 type Symbol struct {
 	Name   string
 	Symbol string
+}
+
+type Bid struct {
+	Price int
+	Qty   int
+	IsBuy bool
+}
+
+type Ask struct {
