@@ -37,3 +37,13 @@ type Bid struct {
 }
 
 type Ask struct {
+	Price int
+	Qty   int
+	IsBuy bool
+}
+
+type Fill struct {
+	Price int
+	Qty   int
+	Ts    time.Time
+}
