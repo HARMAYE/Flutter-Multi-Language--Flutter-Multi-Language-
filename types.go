@@ -47,3 +47,15 @@ type Fill struct {
 	Qty   int
 	Ts    time.Time
 }
+
+type HeartBeat struct {
+	Ok    bool
+	Error string
+}
+
+type VenueHeartBeat struct {
+	Ok    bool
+	Venue string
+}
+
+type VenueStocks struct {
