@@ -59,3 +59,14 @@ type VenueHeartBeat struct {
 }
 
 type VenueStocks struct {
+	Ok      bool
+	Symbols []*Symbol
+}
+
+type StockOrderBook struct {
+	Asks   []*Ask
+	Bids   []*Bid
+	Ok     bool
+	Symbol string
+	Ts     time.Time
+	Venue  string
