@@ -70,3 +70,14 @@ type StockOrderBook struct {
 	Symbol string
 	Ts     time.Time
 	Venue  string
+}
+
+type StockOrder struct {
+	Account     string
+	Direction   string
+	Fills       []*Fill
+	Id          int
+	Ok          bool
+	Open        bool
+	OrderType   string
+	OriginalQty int
