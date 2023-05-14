@@ -81,3 +81,21 @@ type StockOrder struct {
 	Open        bool
 	OrderType   string
 	OriginalQty int
+	Price       int
+	Qty         int
+	Symbol      string
+	TotalFilled int
+	Ts          time.Time
+	Venue       string
+}
+
+type StockQuote struct {
+	Ok        bool
+	Symbol    string
+	Venue     string
+	Bid       int
+	Ask       int
+	BidSize   int
+	AskSize   int
+	BidDepth  int
+	AskDepth  int
