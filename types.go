@@ -99,3 +99,13 @@ type StockQuote struct {
 	AskSize   int
 	BidDepth  int
 	AskDepth  int
+	Last      int
+	LastSize  int
+	LastTrade time.Time
+	QuoteTime time.Time
+}
+
+type Execution struct {
+	Ok               bool
+	Account          string
+	Venue            string
