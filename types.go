@@ -131,3 +131,9 @@ type StockOrderRequest struct {
 	OrderType string
 	Price     int
 	Qty       int
+	Stock     string
+	Venue     string
+}
+
+type StockOrderAccountStatus struct {
+	Ok     bool
