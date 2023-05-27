@@ -121,3 +121,13 @@ type Execution struct {
 }
 
 type wrappedStockQuote struct {
+	Ok    bool
+	Quote *StockQuote
+}
+
+type StockOrderRequest struct {
+	Account   string
+	Direction string
+	OrderType string
+	Price     int
+	Qty       int
