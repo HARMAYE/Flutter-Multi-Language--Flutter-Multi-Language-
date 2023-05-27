@@ -137,3 +137,15 @@ type StockOrderRequest struct {
 
 type StockOrderAccountStatus struct {
 	Ok     bool
+	Venue  string
+	Orders []*StockOrder
+}
+
+func (o *StockOrderAccountStatus) String() string {
+	j, _ := json.Marshal(o)
+	return fmt.Sprintf("StockOrderAccountStatus(%s)", string(j))
+}
+
+func (o *StockOrderRequest) String() string {
+	j, _ := json.Marshal(o)
+	return fmt.Sprintf("StockOrderRequest(%s)", string(j))
