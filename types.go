@@ -109,3 +109,15 @@ type Execution struct {
 	Ok               bool
 	Account          string
 	Venue            string
+	Symbol           string
+	Order            *StockOrder
+	StandingId       int
+	IncomingId       int
+	Price            int
+	Filled           int
+	FilledAt         time.Time
+	StandingComplete bool
+	IncomingComplete bool
+}
+
+type wrappedStockQuote struct {
