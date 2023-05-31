@@ -149,3 +149,14 @@ func (o *StockOrderAccountStatus) String() string {
 func (o *StockOrderRequest) String() string {
 	j, _ := json.Marshal(o)
 	return fmt.Sprintf("StockOrderRequest(%s)", string(j))
+}
+
+func (o *Execution) String() string {
+	j, _ := json.Marshal(o)
+	return fmt.Sprintf("Execution(%s)", string(j))
+}
+
+func (o *StockOrder) String() string {
+	j, _ := json.Marshal(o)
+	return fmt.Sprintf("StockOrder(%s)", string(j))
+}
