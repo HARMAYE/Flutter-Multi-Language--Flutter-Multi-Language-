@@ -160,3 +160,13 @@ func (o *StockOrder) String() string {
 	j, _ := json.Marshal(o)
 	return fmt.Sprintf("StockOrder(%s)", string(j))
 }
+
+func (o *StockQuote) String() string {
+	j, _ := json.Marshal(o)
+	return fmt.Sprintf("StockQuote(%s)", string(j))
+}
+
+func (o *Fill) String() string {
+	j, _ := json.Marshal(o)
+	return fmt.Sprintf("Fill(%s)", string(j))
+}
